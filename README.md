@@ -1,4 +1,4 @@
-# Lexicon_Generator
+# Lexicon Generator
 It Generates Small, Pictographic Lexicons
 
 A better README is coming. For now, it will consist of our CS380 Research Project Proposal.
