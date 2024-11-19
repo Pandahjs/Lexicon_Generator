@@ -11,7 +11,7 @@ A better README is coming. For now, it will consist of our CS380 Research Projec
 Contributors
 ---
 Harris Sinclair (harris.sinclair@digipen.edu)  
-Alex Broadaway (alex.broadaway@digipen.edu)
+Alex Broadaway (alex.broadaway@digipen.edu)  
 Jon Urrutia (jon.u@digipen.edu)
 
 Proposal Overview  
