@@ -1,4 +1,6 @@
-extends Node
+
+@tool
+extends Node2D
 """
  (For the moment)
  -This file will be attached to an empty object of the scene and will have two
@@ -18,16 +20,45 @@ __LOADING__:
 ORIGINE
 """
 
-var test_int: int = 100
+@export var test_int: int = 100
 
-# Called when the node enters the scene tree for the first time.
+# Define custom properties for the Inspector
+func _get_property_list() -> Array:
+	var props = []
+	
+	# Add a label or button to the Inspector (using TYPE_OBJECT for buttons)
+	props.append({
+		"name": "execute_action_button",  # Unique name for the button
+		"type": TYPE_NIL,                 # TYPE_NIL means no value, just a button
+		"usage": PROPERTY_USAGE_EDITOR,   # Make it editable only in the editor
+		"hint": PROPERTY_HINT_NONE        # Optional: No specific hint
+	})
+
+	return props
+
+# Handle custom properties when their values are set
+func _set(property: StringName, value: Variant) -> bool:
+	if property == "execute_action_button":
+		perform_action()  # Call the custom function when the button is clicked
+		return true  # Indicate that the property was handled
+	return false  # Indicate that the property was not handled
+
+# Provide the value for custom properties (optional in this case)
+func _get(property: StringName) -> Variant:
+	return null  # Return null since the button doesn't hold a value
+
+# The custom function to be called when the button is pressed
+func perform_action():
+	print("Button clicked! Performing action...")
+
+# Add the button explicitly if not being created by the inspector
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
 
 """
  This function will be called to serialize the  groups names and
