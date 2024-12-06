@@ -7,6 +7,8 @@ static func gen(lines: int = randi_range(1, 4), curves: int = randi_range(0, 4),
 				strokes: int = randi_range(1, ceil((lines + curves) / 2.)),
 				minLength: float = randf_range(minMinLength, (minMinLength + maxMaxLength) / 2),
 				maxLength: float = randf_range((minMinLength + maxMaxLength) / 2, maxMaxLength)) -> Line2D:
+	
+	# Input validation
 	assert(lines + curves > 0)
 	assert(strokes > 0)
 	assert(strokes <= lines + curves)
@@ -16,6 +18,8 @@ static func gen(lines: int = randi_range(1, 4), curves: int = randi_range(0, 4),
 #	assert(maxCurveAngle <= PI && maxCurveAngle >= 0)
 	assert(minLength >= minMinLength && maxLength <= maxMaxLength)
 	assert(minLength <= maxLength)
+	
+	# init
 	var newStrokes: Array[bool] = []
 	for x in lines + curves - 1:
 		newStrokes.append(x < strokes - 1)
@@ -27,13 +31,18 @@ static func gen(lines: int = randi_range(1, 4), curves: int = randi_range(0, 4),
 	fns.shuffle()
 	var root: Node2D = Node2D.new()
 	var line: Line2D = null
+	
+	# Generation
 	for newStroke in newStrokes:
 		if newStroke:
 			if line:
 				root.add_child(line)
 			line = Line2D.new()
 			line.add_point(Vector2(randf_range(minMinLength, maxMaxLength), randf_range(minMinLength, maxMaxLength)))
-		fns.pop_back().call(line, randf_range(minLength, maxLength))
+		var num: float = randfn(.5, .2)
+		while num < 0 || num > 1:
+			num = randfn(.5, .2)
+		fns.pop_back().call(line, lerpf(minLength, maxLength, num))
 	root.add_child(line)
 	return root
 	
