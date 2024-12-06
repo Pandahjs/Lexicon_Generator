@@ -3,7 +3,7 @@ TODO
 [X] Source Control 
 [ ] Demo
     [ ] Serializer - Jon
-    [ ] Generator - Alex
+    [X] Generator - Alex
     [ ] Compositor - Harris
     [X] Display - Godot
 [ ] Research Paper
