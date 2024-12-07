@@ -1,5 +1,5 @@
 
-@tool
+#@tool
 extends Node2D
 """
  NOTE. IN CASE THAT YOU WANT TO CORRECT A WORDS TRAITS JUST PUT IT'S NAME
@@ -18,6 +18,9 @@ var traits_y_offset = 30;
 var all_words = []
 var all_info : TextEdit;
 	
+# Added for Compatibility - HJS
+@export var WordsDict : Dictionary = {};
+
 # Add the button explicitly if not being created by the inspector
 func _ready():
 	_createTraitBox()
@@ -118,7 +121,7 @@ func _createTraitBox():
 	
 	# Set properties of the TextEdit
 	new_trait_name.set_position(Vector2(0, 0))  # Position the text box at (0, 0)
-	new_trait_name.text = "Write trait name"  # Set default text
+	new_trait_name.placeholder_text = "Write trait name"  # Set default text
 	
 	# Set the minimum size (optional, for resizing)
 	var new_size = Vector2(200, 50)
@@ -148,7 +151,7 @@ func _createWordBox():
 	# Set properties of the TextEdit
 	var new_pos = Vector2(0, 100)
 	new_word_name.set_position(new_pos)  # Position the text box at (0, 0)
-	new_word_name.text = "Write word name"  # Set default text
+	new_word_name.placeholder_text = "Write word name"  # Set default text
 	
 	# Set the minimum size (optional, for resizing)
 	var new_size = Vector2(200, 50)
@@ -207,6 +210,8 @@ func _writeWord(new_word : String,new_word_data : Array) :
 	if new_word == "ALLTRAITS":
 		return
 		
+	WordsDict[new_word] = new_word_data;
+
 	if all_info.text.contains(new_word):
 		for data in all_words:
 			if(data["Word"] == new_word):

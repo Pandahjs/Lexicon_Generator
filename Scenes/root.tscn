@@ -1,8 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://g74yqqilsca6"]
+[gd_scene load_steps=3 format=3 uid="uid://g74yqqilsca6"]
 
+[ext_resource type="Script" path="res://Scripts/Compositor/Composit.gd" id="1_5vbev"]
 [ext_resource type="Script" path="res://Scripts/Serializer/Serialization.gd" id="1_dtl5e"]
 
 [node name="root" type="Node2D"]
+script = ExtResource("1_5vbev")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="UserInterface" type="Node2D" parent="."]
 script = ExtResource("1_dtl5e")
+WordsDict = null
+
+[node name="PrinterViewport" type="Camera2D" parent="."]
+position = Vector2(1729, 323)
+
+[node name="InterfaceViewport" type="Camera2D" parent="."]
+position = Vector2(575, 323)
+
+[node name="GenerateLibraryButton" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 54.0
+offset_right = 550.0
+offset_bottom = 85.0
+text = "Generate Library"
+
+[node name="WordLabel" type="Label" parent="."]
+offset_left = 1159.0
+offset_top = 5.0
+offset_right = 2159.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 52
+
+[node name="Spotlight" type="Node2D" parent="."]
+position = Vector2(1729, 325)
+
+[node name="Bank" type="Node2D" parent="."]
+position = Vector2(1729, 1041)
+
+[node name="Library" type="Node" parent="."]

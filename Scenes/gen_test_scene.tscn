@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ct4e3yx6sskxl"]
+[gd_scene load_steps=2 format=3 uid="uid://ct4e3yx6sskxl"]
 
 [ext_resource type="Script" path="res://Scripts/Generator/GenTest.gd" id="1_d53ir"]
-[ext_resource type="Script" path="res://Scripts/Serializer/Serialization.gd" id="2_1htps"]
 
 [node name="GenTestScene" type="Node2D"]
 
@@ -9,6 +8,3 @@
 
 [node name="GenTest" type="Node2D" parent="."]
 script = ExtResource("1_d53ir")
-
-[node name="Node2D" type="Node2D" parent="."]
-script = ExtResource("2_1htps")
