@@ -256,24 +256,75 @@ Harris' Writing                           =
 -------------------------------------------
 
 Section 1: Investigation of the Existing
-Setting out with the express goal of trying to generate small narrative pseudo languages, we need to develop a sense of why
-these small languages work. What makes them feel "real" to us? So, we began by investigating pre-existing hand crafted narrative
-languages to see if there were some things we could learn about their construction. It was when we came across a post on Steam
-by the alias "Aeith" discussing the indie title Chants of Sennaar that we found a basis for our generator.
+Setting out with the specific goal of generating small narrative pseudo-languages, we knew we had to first 
+understand what makes these languages feel authentic and believable. What characteristics do they possess 
+that allow us to perceive them as “real” in the context of a fictional world? To answer these questions, 
+we decided to investigate pre-existing handcrafted narrative languages to uncover insights into their structure 
+and design. By studying these languages, we hoped to identify key elements that we could incorporate into 
+our own language generator to achieve a similar sense of authenticity.
 
-Aeith had worked through the languages in the game in an attempt to extend them. In doing so, the user had discovered a few
-unique patterns. Take a look at the language of the "Priests" faction in Chants of Sennaar:
-<INSERT IMAGE OF PRIESTS LANGUAGE AND ENGLISH CORRESPONDING WORDS>
-Aeith identified a number of glyphs that were repeated among the symbols in the language.
-This glyph for example <INSERT IMAGE OF GLYPH> indicates this is a place. 
-This other glyph <INSERT IMAGE OF GLYPH> indicates a living thing.
+Our journey took an interesting turn when we came across a post on Steam by a user with the alias "Aeith," 
+who had explored the indie title Chants of Sennaar in great detail. In this post, Aeith discussed their 
+efforts to extend and expand the languages used within the game. As they delved deeper into the game’s 
+linguistic structure, they made a number of fascinating observations, one of which would later form the 
+foundation of our own language generation system. This discovery was pivotal to our project, as it offered 
+a concrete example of how a small, fictional language could feel coherent and structured without relying on 
+the complex intricacies of a full-fledged constructed language.
 
-This concept would become the basis for our generator, allowing all of the novelty to come from the User rather than
-the program and thus bypassing the novelty problem for most PCG content.
+Aeith had studied the various languages in Chants of Sennaar and identified a few unique patterns that helped 
+tie the symbols and their meanings together. For instance, they pointed out specific glyphs within the language 
+of the "Priests" faction that were consistently repeated, each serving as a key marker for certain concepts. 
+Take a look at this example from the Priests’ language: <INSERT IMAGE OF PRIESTS LANGUAGE AND ENGLISH CORRESPONDING WORDS> 
+By analyzing the language, Aeith discovered that certain symbols were used to represent specific themes or categories. 
+One such glyph, for example, <INSERT IMAGE OF GLYPH 1>, consistently indicated the concept of a place. 
+This repetition of the glyph across different words helped establish a semantic link between the word and its meaning, 
+giving the language a sense of structure and predictability.
 
+Similarly, another glyph <INSERT IMAGE OF GLYPH 2> was used to represent living things. This use of consistent, 
+recurring symbols to signify particular types of concepts or entities became a crucial insight for us. It was 
+this very concept—repeated, meaningful glyphs—that would serve as the cornerstone of our language generator.
 
 Section 2: Building the PCG Pipeline
+With our newfound understanding of the system we were building, we organized ourselves into three separate tasks, 
+each focusing on a critical component of the project. One team member was tasked with constructing the dictionary 
+system, which would manage and track the words within the language and their associated traits. Another team member 
+focused on the glyph generator, responsible for creating the basic symbols that would later be used in our language. 
+The third member worked on the compositor, a system designed to take the words and their traits from the dictionary 
+and combine the generated glyphs to form complete language symbols.
 
+To expedite the development process and speed up iteration times, we decided to use the free and open-source Godot 
+Game Engine. We chose Godot due to its permissive license, which allowed us the flexibility to adapt and distribute 
+our work freely, and its ease of use, which helped us focus more on the project itself rather than dealing with 
+complex engine configurations or licensing issues.
 
+The dictionary system, while seemingly simple, is a crucial part of the project. It primarily functions as a dictionary 
+data structure, mapping strings (the words) to arrays of strings (the associated traits). However, its functionality 
+extends beyond just storing data—it's also responsible for saving the dictionary in a JSON file. This feature ensures 
+that our data persists across sessions, allowing the project to maintain its state and enabling us to pick up right 
+where we left off in future work.
+
+Next comes the more complex task of glyph generation. The glyph generator is responsible for creating the visual symbols 
+that represent the words in our language. To ensure the glyphs are neither too simple nor too complex, we used Gaussian 
+Randomness. This approach helps avoid the creation of unrealistically small or intricate glyphs, maintaining a balance 
+between detail and clarity. Additionally, Gaussian Randomness is used in a more subtle way to prevent the generation of 
+overly large or simplistic glyphs. Strokes play a key role in maintaining the integrity of the glyphs, preventing them 
+from devolving into disconnected lines. Each stroke segment follows a Gaussian-defined length, as we discussed earlier, 
+and its direction is determined by a uniform random distribution. There are specific "spikes" in the distribution that 
+increase the likelihood of the stroke aligning with one of the cardinal or intermediate directions. For instance, each 
+cardinal direction has a 1/6 chance, while each intermediate direction has a 1/12 chance. The remaining directions are 
+evenly distributed across the remaining 1/2 of the probability space. The decision to finish a stroke and begin a new 
+one is made using deck randomness, a technique that not only controls the number of strokes in each glyph but also keeps 
+the number of stroke segments varied and unpredictable.
+
+Finally, the compositor system brings everything together. It starts by generating a mapping of trait words to their 
+corresponding unique glyphs, as well as a similar mapping for non-trait words. After this, the compositor generates 
+random placements for the trait glyphs. These glyph placements are randomized only once to ensure consistency 
+throughout the language. Their positioning and recurrence are critical because repetition helps users recognize the 
+traits associated with the words. Non-trait words are then placed at the center of the glyph, while the trait glyphs 
+are superimposed over the main word symbol. This process creates the final symbol that will represent a complete word 
+in our newly constructed language. The compositor's role is essential, as it takes the foundation built by the dictionary 
+and glyph generation systems and combines them into the visual language symbols needed to communicate effectively with 
+the end user.
 
 Section 3: Example of Generation
+
