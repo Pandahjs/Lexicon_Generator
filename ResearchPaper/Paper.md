@@ -327,4 +327,56 @@ and glyph generation systems and combines them into the visual language symbols 
 the end user.
 
 Section 3: Example of Generation
+Let us now walk through a detailed example to better understand the process. For this example, we will use 
+a limited dictionary and walk through how we would generate a new language for the words and their associated traits. 
+Suppose our dictionary contains the following set of words, each with its corresponding traits:
+- Man: Living, Good
+- Monster: Living, Evil
+- Temple: Place, Good
+- Sword: Object
+- Not: (No Traits)
 
+In this case, we have five words in our dictionary: Man, Monster, Temple, Sword, and Not. Alongside the words, we 
+also have a list of traits that describe different concepts. These traits include Living, Good, Evil, Place, and Object. 
+Our task is to generate symbols for these words based on their associated traits.
+
+The first step in our process is to load each of these traits into our dictionary. The dictionary is a fundamental part 
+of the system as it helps us organize and manage the relationships between words and their traits. Once the traits are 
+in place, we then load each word into the dictionary, including their trait associations. This ensures that every word 
+is connected to the correct traits, making it easier to generate appropriate glyphs later on. For instance, we know that 
+"Man" is associated with the traits "Living" and "Good," while "Monster" is associated with "Living" and "Evil." This 
+trait-based structure forms the foundation for the glyph generation process.
+
+Once the dictionary is set up, the next step is to generate glyphs for each of the traits. Each trait is represented by 
+a unique symbol that captures the essence of that concept. These glyphs are key to the language's structure, as they will 
+be used repeatedly to form words and phrases. The symbols for the traits are carefully designed, taking into account the 
+meaning of each trait and how they might interact visually with other symbols. For example, the glyph for "Living" might 
+be different from the glyph for "Place," as they represent distinct concepts. These glyphs are then cataloged in a table 
+for easy reference. Table 1 below shows the glyphs for each of the traits.
+
+<INSERT TABLE 1>
+
+Now that we have generated symbols for the traits, we move on to the next step: creating symbols for the non-trait words. 
+Non-trait words, such as "Man," "Monster," "Temple," and "Sword," do not directly correspond to a specific trait, but they 
+are still important to the language. These words are represented by unique glyphs that incorporate the traits they are 
+associated with. For example, the word "Man," which is associated with the traits "Living" and "Good," will combine the 
+glyphs for these traits into a single symbol. Similarly, "Monster," associated with "Living" and "Evil," will combine the 
+glyphs for those traits. This step ensures that each word in the language is visually linked to its meaning. The symbols 
+for the non-trait words are presented in Table 2 below.
+
+<INSERT TABLE 2>
+
+With the trait glyphs and non-trait word glyphs ready, we move on to the final step: combining the glyphs into a complete 
+symbol for each word. This is where the compositor comes in. The compositor takes the glyphs for each word, arranges them 
+based on their trait associations, and generates the final visual representation of the word. The compositor ensures that 
+the correct glyphs are combined in a way that makes sense both visually and semantically. For example, the word "Man" will 
+have the glyphs for "Living" and "Good" arranged in such a way that reflects both the meaning of the word and the traits it 
+represents. Once all the glyphs are combined, we have the final symbols ready for use. Chart 1 below illustrates the final 
+symbols for each word.
+
+<INSERT CHART 1>
+
+By following this process, we are able to create a coherent, structured language with meaningful visual symbols for each word. 
+The key to this process is the use of traits and their associated glyphs, which provide a consistent framework for generating 
+symbols. Through this approach, we can generate new languages that feel both functional and authentic, allowing for creative 
+expression while maintaining a sense of structure.
