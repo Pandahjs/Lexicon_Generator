@@ -254,3 +254,26 @@ Alex's Writing                            =
 -------------------------------------------
 Harris' Writing                           =
 -------------------------------------------
+
+Section 1: Investigation of the Existing
+Setting out with the express goal of trying to generate small narrative pseudo languages, we need to develop a sense of why
+these small languages work. What makes them feel "real" to us? So, we began by investigating pre-existing hand crafted narrative
+languages to see if there were some things we could learn about their construction. It was when we came across a post on Steam
+by the alias "Aeith" discussing the indie title Chants of Sennaar that we found a basis for our generator.
+
+Aeith had worked through the languages in the game in an attempt to extend them. In doing so, the user had discovered a few
+unique patterns. Take a look at the language of the "Priests" faction in Chants of Sennaar:
+<INSERT IMAGE OF PRIESTS LANGUAGE AND ENGLISH CORRESPONDING WORDS>
+Aeith identified a number of glyphs that were repeated among the symbols in the language.
+This glyph for example <INSERT IMAGE OF GLYPH> indicates this is a place. 
+This other glyph <INSERT IMAGE OF GLYPH> indicates a living thing.
+
+This concept would become the basis for our generator, allowing all of the novelty to come from the User rather than
+the program and thus bypassing the novelty problem for most PCG content.
+
+
+Section 2: Building the PCG Pipeline
+
+
+
+Section 3: Example of Generation
