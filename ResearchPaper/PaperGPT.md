@@ -85,7 +85,7 @@ Section 4: Why do we care?
 > Building tools like these empowers more people to build cool things.
 
 -------
-Fact Checked Chat GPT Response
+Chat GPT Response
 -------
 
 **Title: Pseudo-Lexical Generation: Constructing Meaningful Symbols Through Trait-Based PCG**
@@ -100,7 +100,7 @@ This paper introduces the concept of *Pseudo Lexical Generation* (PLG), a method
 
 ### **Introduction**
 
-Language, in all its complexities, is an integral aspect of human culture, communication, and creativity. Various forms of media, literature, film, video games, etc, or *interactive fiction—constructed languages* (or *conlangs*) play a significant role in enriching storytelling and world-building. From J.R.R. Tolkien's Elvish languages to the Dothraki in *Game of Thrones*, the creation of fictional languages often involves intricate systems of phonetics, grammar, and meaning. However, the construction of a language from scratch can be a time-consuming and resource-intensive process. 
+Language, in all its complexities, is an integral aspect of human culture, communication, and creativity. In various forms of media—whether literature, film, video games, or interactive fiction—constructed languages (or *conlangs*) play a significant role in enriching storytelling and world-building. From J.R.R. Tolkien's Elvish languages to the Dothraki in *Game of Thrones*, the creation of fictional languages often involves intricate systems of phonetics, grammar, and meaning. However, the construction of a language from scratch can be a time-consuming and resource-intensive process. 
 
 This paper proposes an innovative method of generating pseudo-lexical systems through procedural content generation (PCG) techniques. We define *Pseudo Lexical Generation* (PLG) as the creation of a linguistic system where words are represented by symbols that incorporate both inherent and trait-based characteristics. These symbols interact with each other in a way that respects certain shared rules, producing a small, internally consistent language. The goal of this approach is to make language generation both efficient and flexible, while still maintaining the narrative and thematic coherence necessary for storytelling and engagement.
 
@@ -172,11 +172,11 @@ To demonstrate the PLG process, consider the following small dictionary of five 
 
 #### **Generate Symbols for Trait Words and Non-Trait Words**
 
-Each word is first assigned a symbol based on its inherent meaning. For example, the symbol for "man" might incorporate an abstract representation of a living being, combined with a marker for goodness. For "monster," the symbol would reflect its living nature as well as incorporate an evil marker. Non-trait words, such as "sword," would be represented with a more neutral symbol, indicating its function as an object.
+Each word is first assigned a symbol based on its inherent meaning. For example, the symbol for "man" might incorporate an abstract representation of a living being, combined with a marker for goodness. For "monster," the symbol would reflect its living nature but would instead incorporate an evil marker. Non-trait words, such as "sword," would be represented with a more neutral symbol, indicating its function as an object.
 
 #### **Show Composition After Generation**
 
-Once the symbols for each word and trait are generated, they can be combined according to the grammatical rules of the system. For instance, a phrase like "man not monster" would generate a symbol for "monster" overlaid with the negation symbol and then combined with the symbol for "man." The result would be a new symbol that communicates the idea of a man who is not a monster, maintaining consistency with the language's underlying rules.
+Once the symbols for each word and trait are generated, they can be combined according to the grammatical rules of the system. For instance, a phrase like "man not monster" would generate a symbol for "man" overlaid with the negation symbol and then combined with the symbol for "monster." The result would be a new symbol that communicates the idea of a man who is not a monster, maintaining consistency with the language's underlying rules.
 
 ---
 
@@ -198,4 +198,4 @@ By making the process of language generation more accessible, we empower more cr
 
 ### **Conclusion**
 
-Pseudo Lexical Generation represents an innovative approach to constructing languages through procedural content generation. By combining words with trait-based symbols, we can create small, internally consistent languages that serve the needs of narrative and world-building in fiction. This paper has outlined the process of constructing such a system, provided an example of its application, and demonstrated the potential of PLG to enhance creative storytelling.
+Pseudo Lexical Generation represents an innovative approach to constructing languages through procedural content generation. By combining words with trait-based symbols, we can create small, internally consistent languages that serve the needs of narrative and world-building in fiction. This paper outlines the process of constructing such a system, provides an example of its application, and demonstrates the potential of PLG to enhance creative storytelling.
