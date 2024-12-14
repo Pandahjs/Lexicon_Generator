@@ -251,6 +251,23 @@ application, and demonstrated the potential of PLG to enhance creative storytell
 Alex's Writing                            =
 -------------------------------------------
 
+
+-------------------------------------------
+Jon's Writing                           =
+-------------------------------------------
+
+Introduction
+
+Language is one of the most versatile tools humanity has ever developed, capable of encoding complex ideas, emotions, and stories. In computational linguistics, there is a growing interest in not only understanding and processing existing languages but also in generating entirely new ones. This process, often referred to as "pseudo lexical generation," explores how small narrative languages—synthetic languages with specific purposes or constrained vocabularies—can be created to support storytelling, world-building, and computational experiments.
+
+Small narrative languages, as a subset of constructed languages (conlangs), focus on their applicability within limited contexts, such as fictional worlds, constrained storytelling environments, or machine learning applications. Unlike general-purpose languages, these synthetic constructs are often designed with targeted communicative goals in mind, such as expressing a specific cultural perspective, encoding unique storytelling mechanics, or representing abstract concepts through compact and symbolic lexicons.
+
+The pseudo lexical generator discussed in this paper is implemented using the Godot engine. It allows users to serialize basic concepts, such as verbs, living entities, and places, into a structured dictionary. Additional words are then described using these primary concepts. The system generates random draws for the concepts, which are subsequently used to create new language symbols representing the words derived from them. This approach enables the creation of novel languages, where the limits on the number of languages generated reside solely in the set of symbols provided by the user. Each unique set of symbols defines a new language, offering an expansive potential for linguistic variation.
+
+The applications of this system are diverse and compelling. For instance, it can be used to immerse players in the story of a game by giving "local" NPCs their own language, enhancing the depth of the fictional world. Alternatively, it could serve as the foundation for a game mechanic centered around discovering and deciphering symbols of an unknown language. These examples highlight the system’s potential to enrich interactive storytelling and create unique player experiences.
+
+This paper explores the theoretical underpinnings, methodologies, and applications of pseudo lexical generation in the context of narrative construction. It aims to establish a framework for understanding how small narrative languages can enhance storytelling, offer insights into linguistic evolution, and serve as tools for computational creativity. Through this investigation, we seek to address key questions: How can pseudo lexical generation be systematically approached? What are the practical benefits of using such languages in constrained narratives? And how can emerging technologies make this process more accessible to creators and researchers alike?
+
 -------------------------------------------
 Harris' Writing                           =
 -------------------------------------------
