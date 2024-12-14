@@ -245,3 +245,12 @@ Pseudo Lexical Generation represents an innovative approach to constructing lang
 combining words with trait-based symbols, we can create small, internally consistent languages that serve the needs of narrative 
 and world-building in fiction. This paper has outlined the process of constructing such a system, provided an example of its 
 application, and demonstrated the potential of PLG to enhance creative storytelling.
+
+
+-------------------------------------------
+Alex's Writing                            =
+-------------------------------------------
+
+-------------------------------------------
+Harris' Writing                           =
+-------------------------------------------
